@@ -1,0 +1,10 @@
+<%= form_for @item, multipart: true  do |f| %>
+    <%= f.file_field :data %>
+    <%= f.submit "Upload" %>
+<% end %>
+
+<ul>
+  <%- @items.each do |item| %>
+      <li><%= item.data.to_json %></li>
+  <% end %>
+</ul>
