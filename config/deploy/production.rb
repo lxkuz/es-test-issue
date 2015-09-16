@@ -1,6 +1,6 @@
 # invest.minvoatokrazvitia.ru
 server '144.76.120.175', user: 'es-test-issue', roles: %w(web app db)
-set :rvm_ruby_version, '2.1.5'
+set :rvm_ruby_version, '2.1.0'
 set :deploy_to, '/srv/mystand/es-test-issue/repository'
 
 namespace :unicorn do

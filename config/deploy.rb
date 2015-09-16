@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.3.5'
+lock '3.4.0'
 
 set :application, 'es-test-issue'
 set :repo_url, 'git@github.com:lxkuz/es-test-issue.git'

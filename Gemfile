@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
+gem 'capistrano'
 # Use Capistrano for deployment
 gem 'capistrano-rails'
 # Bundler support for Capistrano 3.x
@@ -51,5 +52,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'unicorn'
 end
 
