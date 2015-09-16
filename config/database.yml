@@ -15,3 +15,4 @@ test:
 production:
   <<: *common
   database: es_test_development
+awd
