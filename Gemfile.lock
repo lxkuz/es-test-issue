@@ -142,6 +142,7 @@ GEM
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
+    sparsify (1.1.0)
     spring (1.4.0)
     sprockets (3.3.4)
       rack (~> 1.0)
@@ -192,6 +193,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   slim
+  sparsify
   spring
   turbolinks
   uglifier (>= 1.3.0)

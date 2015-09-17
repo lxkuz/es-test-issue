@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'orchestrate', '~> 0.11.3'
 gem 'slim'
+gem "sparsify"
 
 gem 'capistrano'
 # Use Capistrano for deployment
