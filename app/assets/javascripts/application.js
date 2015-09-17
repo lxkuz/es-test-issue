@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require_directory ../../../vendor/assets/javascripts/application
+//= require_tree ./common
+//= require_tree ./application
 //= require_tree .
+

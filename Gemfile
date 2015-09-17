@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'orchestrate', '~> 0.11.3'
+gem 'slim'
 
 gem 'capistrano'
 # Use Capistrano for deployment
