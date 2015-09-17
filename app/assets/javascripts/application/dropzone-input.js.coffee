@@ -14,7 +14,7 @@ class DropzoneInput
         url: @el.attr('action')
         success: @updateTarget
         beforeSend: @loading
-    , 200    
+    , 1000   
 
   updateTarget: (data) =>
     $(".list").html("")
