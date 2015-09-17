@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
   def index
-    # client = Orchestrate::Client.new("7f1aab23-01c6-4075-bd7f-5dfa0f025fdc")
+    client = Orchestrate::Client.new("7f1aab23-01c6-4075-bd7f-5dfa0f025fdc")
     app = Orchestrate::Application.new("7f1aab23-01c6-4075-bd7f-5dfa0f025fdc")
     collection = app[:files]
     if !params[:query].blank?
-      @items = collection.search(params[:query]).find.map {|item| [item[1].value]}
+      @items = collection.search(params[:query]).find.take(10).map {|item| item[1].value}
     else
-      @items = collection.map {|item| [item.value]}
+      @items = collection.search("*").find.take(10).map {|item| item[1].value}
     end
     
     if request.xhr?

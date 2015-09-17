@@ -2,6 +2,6 @@
   - @items.each_with_index do |item, index|
     .item.hightlight-json
       pre
-        code.json.hljs== item[0].to_json
+        code.json.hljs== JSON.pretty_generate(item)
 - else
   .no-found Results not found
