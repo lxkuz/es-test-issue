@@ -1,3 +1,5 @@
+require 'json_parser'
+
 class ItemsController < ApplicationController
   def index
     client = Orchestrate::Client.new("7f1aab23-01c6-4075-bd7f-5dfa0f025fdc")
@@ -21,7 +23,11 @@ class ItemsController < ApplicationController
 
     file = params[:file]
     file_json = JSON.parse(File.read(file.tempfile))
-    collection << file_json
+    parsed_json_arr = JsonParser.start file_json
+
+    parsed_json_arr.each do |obj|
+      collection << obj
+    end
 
     if request.xhr?
       render text: true
